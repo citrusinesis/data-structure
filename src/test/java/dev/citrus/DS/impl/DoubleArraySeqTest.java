@@ -194,6 +194,12 @@ class DoubleArraySeqTest {
         assertEquals(checkSize, prepared.data.length);
         for (int i = 0; i < shouldBe.length; i++)
             assertEquals(shouldBe[i], prepared.data[i]);
+
+        // when
+        prepared.ensureCapacity(--checkSize);
+
+        // then
+        assertEquals(checkSize + 1, prepared.data.length);
     }
 
     @Test
