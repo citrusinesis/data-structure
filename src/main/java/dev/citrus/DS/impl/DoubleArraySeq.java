@@ -234,7 +234,7 @@ public class DoubleArraySeq implements Cloneable {
             return;
 
         double[] replacement = new double[minimumCapacity];
-        System.arraycopy(this.data, 0, replacement, 0, this.size());
+        System.arraycopy(this.data, 0, replacement, 0, manyItems);
         this.data = replacement;
     }
 
