@@ -327,6 +327,11 @@ public class DoubleArraySeq implements Cloneable {
      * @throws OutOfMemoryError Indicates insufficient memory for altering the capacity.
      */
     public void trimToSize() {
-        ensureCapacity(this.size());
+        if (this.data.length == manyItems)
+            return;
+
+        double[] replacements = new double[manyItems];
+        System.arraycopy(data, 0, replacements, 0, manyItems);
+        data = replacements;
     }
 }
