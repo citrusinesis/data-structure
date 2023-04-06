@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3707d5e8-da10-4f24-9472-de465631d6a1" name="Changes" comment="reimplement `trimToSize`">
+    <list default="true" id="3707d5e8-da10-4f24-9472-de465631d6a1" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/citrus/DS/RunnerInterface.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/citrus/DS/impl/DoubleArraySeq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/citrus/DS/impl/DoubleArraySeq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/citrus/DS/impl/DoubleArraySeqTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/citrus/DS/impl/DoubleArraySeqTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680595678186</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update">
+      <created>1680747316056</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680747316056</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +325,8 @@
     <MESSAGE value="implement of `DoubleArraySeq`" />
     <MESSAGE value="reimplement `ensureCapacity`" />
     <MESSAGE value="reimplement `trimToSize`" />
-    <option name="LAST_COMMIT_MESSAGE" value="reimplement `trimToSize`" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

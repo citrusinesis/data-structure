@@ -43,7 +43,7 @@ public class DoubleArraySeq implements Cloneable {
      * @throws IllegalArgumentException Indicates that initialCapacity is negative.
      * @throws OutOfMemoryError         Indicates insufficient memory for new double[initialCapacity].
      */
-    public DoubleArraySeq(int initialCapacity) {
+    public DoubleArraySeq(int initialCapacity) throws OutOfMemoryError {
         if (initialCapacity < 0) {
             throw new IllegalArgumentException("initialCapacity should not be negative.");
         }
@@ -67,7 +67,10 @@ public class DoubleArraySeq implements Cloneable {
      * @throws NullPointerException Indicates that one of the arguments is null.
      * @throws OutOfMemoryError     Indicates insufficient memory for the new sequence.
      */
-    public static DoubleArraySeq concatenation(DoubleArraySeq s1, DoubleArraySeq s2) {
+    public static DoubleArraySeq concatenation(
+            DoubleArraySeq s1,
+            DoubleArraySeq s2
+    ) throws OutOfMemoryError {
         if (s1 == null || s2 == null)
             throw new NullPointerException("Arguments should not be null.");
 
@@ -92,7 +95,7 @@ public class DoubleArraySeq implements Cloneable {
      * @param element The new element that is being added.
      * @throws OutOfMemoryError Indicates insufficient memory to increase the size of this sequence.
      */
-    public void addAfter(double element) {
+    public void addAfter(double element) throws OutOfMemoryError {
         if (size() == getCapacity())
             ensureCapacity(2 * size() + 1);
 
@@ -126,7 +129,7 @@ public class DoubleArraySeq implements Cloneable {
      * @param element The new element that is being added.
      * @throws OutOfMemoryError Indicates insufficient memory to increase the size of this sequence.
      */
-    public void addBefore(double element) {
+    public void addBefore(double element) throws OutOfMemoryError {
         if (size() == getCapacity())
             ensureCapacity(2 * size() + 1);
 
@@ -160,7 +163,7 @@ public class DoubleArraySeq implements Cloneable {
      * @throws NullPointerException Indicates that addend is null.
      * @throws OutOfMemoryError     Indicates insufficient memory to increase the capacity of this sequence.
      */
-    public void addAll(DoubleArraySeq addend) {
+    public void addAll(DoubleArraySeq addend) throws OutOfMemoryError {
         if (addend == null)
             throw new NullPointerException("Addend should not be null.");
 
@@ -197,12 +200,12 @@ public class DoubleArraySeq implements Cloneable {
      * Generate a copy of this sequence.
      *
      * @return DoubleArraySeq
-     *     The return value is a copy of this sequence.
-     *     Subsequent changes to the copy will not affect the original, nor vice versa.
-     *     The return value must be typecast to DoubleArraySeq before it is used.
+     * The return value is a copy of this sequence.
+     * Subsequent changes to the copy will not affect the original, nor vice versa.
+     * The return value must be typecast to DoubleArraySeq before it is used.
      * @throws OutOfMemoryError Indicates insufficient memory for creating the clone.
      */
-    public DoubleArraySeq clone() {
+    public DoubleArraySeq clone() throws OutOfMemoryError {
         DoubleArraySeq toReturn;
 
         try {
@@ -227,7 +230,7 @@ public class DoubleArraySeq implements Cloneable {
      * @param minimumCapacity the new capacity for this sequence
      * @throws OutOfMemoryError Indicates insufficient memory for new double[minimumCapacity].
      */
-    public void ensureCapacity(int minimumCapacity) {
+    public void ensureCapacity(int minimumCapacity) throws OutOfMemoryError {
         if (minimumCapacity < this.data.length)
             return;
 
@@ -324,7 +327,7 @@ public class DoubleArraySeq implements Cloneable {
      *
      * @throws OutOfMemoryError Indicates insufficient memory for altering the capacity.
      */
-    public void trimToSize() {
+    public void trimToSize() throws OutOfMemoryError {
         if (this.data.length == manyItems)
             return;
 
