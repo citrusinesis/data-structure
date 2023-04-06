@@ -20,7 +20,7 @@ public class DoubleArraySeq implements Cloneable {
     /**
      * Initialize an empty sequence with an initial capacity of 10.
      * Note that the addAfter and addBefore methods work efficiently (without needing more memory) until this capacity is reached.
-     * <p>
+     *
      * Postcondition:
      * This sequence is empty and has an initial capacity of 10.
      *
