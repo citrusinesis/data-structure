@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3707d5e8-da10-4f24-9472-de465631d6a1" name="Changes" comment="make `RunnerInterface`">
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/citrus/DS/impl/DoubleArraySeqTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="3707d5e8-da10-4f24-9472-de465631d6a1" name="Changes" comment="reimplement `trimToSize`">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/citrus/DS/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/citrus/DS/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/citrus/DS/RunnerInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/citrus/DS/impl/DoubleArraySeq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/citrus/DS/impl/DoubleArraySeq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/citrus/DS/impl/DoubleArraySeqTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/citrus/DS/impl/DoubleArraySeqTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,28 +51,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/citrusinesis/Repo/data-structure",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/citrusinesis/Repo/data-structure&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -132,7 +130,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="DoubleArraySeqTest.removeCurrent" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DoubleArraySeqTest.defaultConstructor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -145,7 +143,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;dev.citrus.DS.impl.DoubleArraySeqTest.removeCurrent&quot;" />
+            <option value="&quot;dev.citrus.DS.impl.DoubleArraySeqTest.defaultConstructor&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -156,7 +154,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="DoubleArraySeqTest.start" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DoubleArraySeqTest.ensureCapacity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +167,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;dev.citrus.DS.impl.DoubleArraySeqTest.start&quot;" />
+            <option value="&quot;dev.citrus.DS.impl.DoubleArraySeqTest.ensureCapacity&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,7 +178,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="DoubleArraySeqTest.trimToSize" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DoubleArraySeqTest.isCurrent" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,7 +191,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;dev.citrus.DS.impl.DoubleArraySeqTest.trimToSize&quot;" />
+            <option value="&quot;dev.citrus.DS.impl.DoubleArraySeqTest.isCurrent&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,10 +205,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.DoubleArraySeqTest" />
-        <item itemvalue="Gradle.DoubleArraySeqTest.removeCurrent" />
+        <item itemvalue="Gradle.DoubleArraySeqTest.isCurrent" />
         <item itemvalue="Gradle.DoubleArraySeqTest.addAll" />
-        <item itemvalue="Gradle.DoubleArraySeqTest.trimToSize" />
-        <item itemvalue="Gradle.DoubleArraySeqTest.start" />
+        <item itemvalue="Gradle.DoubleArraySeqTest.ensureCapacity" />
+        <item itemvalue="Gradle.DoubleArraySeqTest.defaultConstructor" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +238,63 @@
       <option name="project" value="LOCAL" />
       <updated>1677740858510</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update IDE settings">
+      <created>1680202973049</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680202973049</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore: add entrypoint">
+      <created>1680202985869</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680202985869</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add jacoco: to check code coverage">
+      <created>1680203000263</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680203000263</updated>
+    </task>
+    <task id="LOCAL-00006" summary="implement of `DoubleArraySeq`">
+      <created>1680203021169</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680203021169</updated>
+    </task>
+    <task id="LOCAL-00007" summary="implement of `DoubleArraySeq`">
+      <created>1680203104924</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680203104924</updated>
+    </task>
+    <task id="LOCAL-00008" summary="reimplement `ensureCapacity`">
+      <created>1680594608204</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680594608204</updated>
+    </task>
+    <task id="LOCAL-00009" summary="reimplement `ensureCapacity`">
+      <created>1680594986336</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680594986336</updated>
+    </task>
+    <task id="LOCAL-00010" summary="reimplement `trimToSize`">
+      <created>1680595678186</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680595678186</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +314,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialize" />
     <MESSAGE value="make `RunnerInterface`" />
-    <option name="LAST_COMMIT_MESSAGE" value="make `RunnerInterface`" />
+    <MESSAGE value="update IDE settings" />
+    <MESSAGE value="chore: add entrypoint" />
+    <MESSAGE value="add jacoco: to check code coverage" />
+    <MESSAGE value="implement of `DoubleArraySeq`" />
+    <MESSAGE value="reimplement `ensureCapacity`" />
+    <MESSAGE value="reimplement `trimToSize`" />
+    <option name="LAST_COMMIT_MESSAGE" value="reimplement `trimToSize`" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

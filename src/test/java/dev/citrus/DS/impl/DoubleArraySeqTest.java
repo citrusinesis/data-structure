@@ -115,7 +115,7 @@ class DoubleArraySeqTest {
         small.addAll(prepared);
 
         // then
-        assertDoubleArraySeq(data, 1, 6, small);
+        assertDoubleArraySeq(data, 0, 6, small);
 
         // throws
         assertThrows(NullPointerException.class, () -> empty.addAll(null));
@@ -156,7 +156,7 @@ class DoubleArraySeqTest {
         DoubleArraySeq shouldBe = new DoubleArraySeq();
         shouldBe.data = new double[]{0.1, 0.2, 0.3, 0.4, 0.5, 0.1, 0.0};
         shouldBe.manyItems = 6;
-        shouldBe.currentIndex = 5;
+        shouldBe.currentIndex = 0;
 
         // when
         DoubleArraySeq resultSeq = DoubleArraySeq.concatenation(prepared, small);
@@ -231,12 +231,13 @@ class DoubleArraySeqTest {
     @Test
     void isCurrent() {
         // given -> initialize()
+        prepared.currentIndex = 100;
 
         // when
 
         // then
         assertFalse(empty.isCurrent());
-        assertTrue(prepared.isCurrent());
+        assertFalse(prepared.isCurrent());
         assertTrue(small.isCurrent());
     }
 
@@ -274,12 +275,15 @@ class DoubleArraySeqTest {
     @Test
     void start() {
         // given -> initialize()
+        prepared.currentIndex = 3;
 
         // when
         empty.start();
+        prepared.start();
 
         // then
-        assertEquals(0, empty.currentIndex);
+        assertEquals(-1, empty.currentIndex);
+        assertEquals(0, prepared.currentIndex);
     }
 
     @Test

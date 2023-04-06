@@ -4,7 +4,7 @@ package dev.citrus.DS.impl;
  * A DoubleArraySeq keeps track of a sequence of double numbers.
  * The sequence can have a special “current element,” which is specified and accessed through four methods
  * that are not available in the bag class (start, getCurrent, advance, and isCurrent).
- * <p>
+ *
  * Limitations:
  * (1) The capacity of a sequence can change after it’s created, but the maximum capacity is limited by the amount of free memory on the machine.
  * The constructor, addAfter, addBefore, clone, and concatenation will result in an OutOfMemoryError when free memory is exhausted.
@@ -20,13 +20,13 @@ public class DoubleArraySeq implements Cloneable {
     /**
      * Initialize an empty sequence with an initial capacity of 10.
      * Note that the addAfter and addBefore methods work efficiently (without needing more memory) until this capacity is reached.
-     *
+     * <p>
      * Postcondition:
-     *     This sequence is empty and has an initial capacity of 10.
+     * This sequence is empty and has an initial capacity of 10.
      *
      * @throws OutOfMemoryError Indicates insufficient memory for new double[10].
      */
-    public DoubleArraySeq() {
+    public DoubleArraySeq() throws OutOfMemoryError {
         this(10);
     }
 
@@ -164,13 +164,11 @@ public class DoubleArraySeq implements Cloneable {
         if (addend == null)
             throw new NullPointerException("Addend should not be null.");
 
-        int totalItems = this.size() + addend.size();
-        if (totalItems > getCapacity())
+        if (this.size() + addend.size() > getCapacity())
             ensureCapacity(2 * (this.size() + addend.size()) + 1);
 
         System.arraycopy(addend.data, 0, this.data, this.size(), addend.size());
 
-        this.currentIndex = this.size();
         this.manyItems += addend.manyItems;
     }
 
@@ -271,7 +269,7 @@ public class DoubleArraySeq implements Cloneable {
      * @return true (there is a current element) false (there is no current element at the moment)
      */
     public boolean isCurrent() {
-        return size() != 0;
+        return size() != 0 && size() > this.currentIndex && this.currentIndex >= 0;
     }
 
     /**
@@ -315,7 +313,7 @@ public class DoubleArraySeq implements Cloneable {
      *     The front element of this sequence is now the current element (but if this sequence has no elements at all, then there is no current element).
      */
     public void start() {
-        currentIndex = 0;
+        currentIndex = size() == 0 ? -1 : 0;
     }
 
     /**
