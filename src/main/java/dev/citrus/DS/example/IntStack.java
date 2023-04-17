@@ -225,4 +225,27 @@ public class IntStack implements Cloneable {
             data = trimmedArray;
         }
     }
+
+    public static void main(String[] args) {
+        IntStack stack = new IntStack();
+        stack.push(5);
+        stack.push(5);
+        stack.push(5);
+
+        System.out.println(stack);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append("[ ");
+        for (int el : this.data) {
+            stringBuilder.append(el);
+            stringBuilder.append(" ");
+        }
+        stringBuilder.append("]");
+
+        return stringBuilder.toString();
+    }
 }

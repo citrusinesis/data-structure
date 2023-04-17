@@ -125,4 +125,8 @@ public class IntLinkedStack implements Cloneable {
         return IntNode.listLength(top);
     }
 
+    @Override
+    public String toString() {
+        return "[ " + this.top.toString() + "]";
+    }
 }

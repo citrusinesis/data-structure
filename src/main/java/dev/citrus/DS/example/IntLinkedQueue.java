@@ -128,4 +128,8 @@ public class IntLinkedQueue implements Cloneable {
         return manyNodes;
     }
 
+    @Override
+    public String toString() {
+        return "[ " + this.front.toString() + "]";
+    }
 }

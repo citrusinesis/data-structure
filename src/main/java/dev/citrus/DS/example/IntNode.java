@@ -295,4 +295,15 @@ public class IntNode {
     public void removeNodeAfter() {
         link = link.link;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        IntNode cursor;
+
+        for (cursor = this; cursor != null; cursor = cursor.getLink())
+            stringBuilder.append(cursor.getData()).append(" ");
+
+        return stringBuilder.toString();
+    }
 }

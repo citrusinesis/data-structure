@@ -272,4 +272,18 @@ public class IntQueue implements Cloneable {
             data = trimmedArray;
         }
     }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append("< ");
+        for (int el : this.data) {
+            stringBuilder.append(el);
+            stringBuilder.append(" ");
+        }
+        stringBuilder.append(">");
+
+        return stringBuilder.toString();
+    }
 }
